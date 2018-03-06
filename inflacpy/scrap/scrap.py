@@ -10,7 +10,7 @@ class Scrap():
     '''
 
     def __init__(self):
-        self.url = 'http://pt.inflation.eu/taxas-de-inflacao/brasil/inflacao-historica/'
+        self.url = 'http://pt.inflation.eu/taxas-de-inflacao/'
 
 
     def get_data(self, year_start=1981, year_end=0, country=''):
@@ -23,6 +23,7 @@ class Scrap():
             :rtype: list
         '''
 
+        _url = self.url + country + '/inflacao-historica/'
         now = datetime.datetime.now()
         country = Util.corr_date_input(country)
         links_anos = []
@@ -31,10 +32,10 @@ class Scrap():
         if year_end == 0:
             year_end = now.year
 
-        self.url += 'ipc-inflacao-' + country + '-'
+        _url += 'ipc-inflacao-' + country + '-'
 
-        for year in range(year_start, year_end + 1):
-            links_anos.append(self.url + str(year) + '.aspx')
+        for year in range(int(year_start), int(year_end) + 1):
+            links_anos.append(_url + str(year) + '.aspx')
 
         inflacoes = []
         # Recuperando as informações de todos os links
