@@ -16,6 +16,10 @@ Por exemplo:
 /search?initial=2015&final=2018&country=brasil
 ```
 
+## Live
+
+Há um exemplo desta aplicação rodando em: https://inflacpy-api.herokuapp.com/
+
 Lembre-se, todos os parâmetros devem ser passados para a API, caso contrário a pesquisa não será feita.
 
 ### Sobre
