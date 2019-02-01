@@ -4,7 +4,7 @@ bs4==0.0.1
 certifi==2018.1.18
 chardet==3.0.4
 click==6.7
-Flask==0.12.2
+flask>=0.12.3
 Flask-Jsonpify==1.5.0
 Flask-RESTful==0.3.6
 Flask-SQLAlchemy==2.3.2
@@ -17,7 +17,7 @@ numpy==1.14.1
 pandas==0.22.0
 python-dateutil==2.6.1
 pytz==2018.3
-requests==2.18.4
+requests>=2.20.0
 six==1.11.0
 SQLAlchemy==1.2.4
 urllib3>=1.23
